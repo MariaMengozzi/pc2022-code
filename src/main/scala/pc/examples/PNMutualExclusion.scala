@@ -15,8 +15,8 @@ object PNMutualExclusion:
 
   // DSL-like specification of a Petri Net
   def pnME = PetriNet[Place](
-    MSet(N) ~~> MSet(T),
-    MSet(T) ~~> MSet(C) ^^^ MSet(C),
+    MSet(N) ~~> MSet(T), //transaction with inh empty --> Trn({N},{T},{})
+    MSet(T) ~~> MSet(C) ^^^ MSet(C), //transaction with inh equals to the eff set --> Trn({T},{C},{C})
     MSet(C) ~~> MSet()
   ).toSystem
 
@@ -24,3 +24,5 @@ object PNMutualExclusion:
   import PNMutualExclusion.*
   // example usage
   println(pnME.paths(MSet(N,N),7).toList.mkString("\n"))
+  println
+  println(pnME.paths(MSet(N,N,T),4).toList.mkString("\n"))
