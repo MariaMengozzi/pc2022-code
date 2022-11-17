@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be6a05cf-828c-439b-bff8-9ca1199192f0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/pc/examples/DAPGossip.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/pc/examples/DAPGossip.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +48,14 @@
     &quot;last_opened_file_path&quot;: &quot;/media/dati/work/Lessons/2022-2023/pc/pc-mod2-code&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.mainDAPGossip">
-    <configuration name="DAPGossip" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="pc.examples.DAPGossip" />
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pc.examples" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ReadersAndWriters">
+    <configuration name="ReadersAndWriters" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="pc.examples.ReadersAndWriters" />
       <module name="pc2-code" />
       <extension name="coverage">
         <pattern>
@@ -130,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReadersAndWriters" />
         <item itemvalue="Application.mainDAPGossip" />
         <item itemvalue="Application.mainStochasticChannelSimulation" />
         <item itemvalue="Application.StochasticMutualExclusion" />
         <item itemvalue="Application.mainStochasticChannel" />
-        <item itemvalue="Application.DAPGossip" />
       </list>
     </recent_temporary>
   </component>
