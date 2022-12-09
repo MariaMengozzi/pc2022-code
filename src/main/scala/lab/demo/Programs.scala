@@ -88,13 +88,14 @@ object Demo7 extends Simulation[Main7]
 
 class Main8 extends AggregateProgramSkeleton {
  // override def main() = minHoodPlus(nbrRange)
+  //have in each node the ID of the closest neighbour
   override def main() = minHoodPlus((nbrRange, nbr(mid())))
 }
 object Demo8 extends Simulation[Main8]
 
 class Main9 extends AggregateProgramSkeleton {
-  //override def main() = rep(0){x => if(sense1) {if (x < 1000) x + 1 else 1000 } else 0}
-  override def main() = rep(0){ d => mux[Int](sense1){0}{ if (d < 1000) d + 1 else 1000} }
+  //where sense1 is active count from 0 to 1000 and then stay freezed at 1000, otherwise 0
+  override def main() = mux{sense1}{rep(0){2000 min _ + 1}}{0}
 }
 object Demo9 extends Simulation[Main9]
 
@@ -112,6 +113,7 @@ class Main12 extends AggregateProgramSkeleton {
   import Builtins.Bounded.of_i
 
   //override def main() = maxHoodPlus(boolToInt(nbr{sense1}))
+  // gather in each node the set of neighbour'sDs
   override def main() = foldhood(Set[ID]())(_ ++ _){nbr{Set(mid())}}
 }
 object Demo12 extends Simulation[Main12]
@@ -123,8 +125,8 @@ object Demo13 extends Simulation[Main13]
 
 class Main14 extends AggregateProgramSkeleton {
   import Builtins.Bounded.of_i
-
-  override def main() = rep(0){ x => boolToInt(sense1) max maxHoodPlus( nbr{x}) }
+  //gossip the maximum value of ID
+  override def main() = rep(0){ x => mid() max maxHoodPlus( nbr{x}) }
 }
 object Demo14 extends Simulation[Main14]
 
@@ -134,6 +136,8 @@ class Main15 extends AggregateProgramSkeleton {
 object Demo15 extends Simulation[Main15]
 
 class Main16 extends AggregateProgramSkeleton {
-  override def main() = rep(Double.MaxValue){ d => mux[Double](sense1){0.0}{minHoodPlus(nbr{d}+nbrRange)} }
+  //override def main() = rep(Double.MaxValue){ d => mux[Double](sense1){0.0}{minHoodPlus(nbr{d}+nbrRange)} }
+  //define a gradient that stretches distances so that where sense2 is true they become 5 times larger
+  override def main() = rep(Double.MaxValue){ d => mux[Double](sense1){0.0}{minHoodPlus(nbr{d}+nbrRange) * mux(sense2){5}{1}}}
 }
 object Demo16 extends Simulation[Main16]
