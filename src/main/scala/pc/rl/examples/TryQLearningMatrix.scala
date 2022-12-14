@@ -11,9 +11,9 @@ object TryQMatrix extends App:
     width = 5,
     height = 5,
     initial = (0,0),
-    terminal = {case _=>false},
-    reward = { case ((1,0),_) => 10; case ((3,0),_) => 5; case _ => 0},
-    jumps = { case ((1,0),_) => (1,4); case ((3,0),_) => (3,2) },
+    terminal = {case (2,3)=>true; case _ => false},
+    reward = { case ((2,3),_) => 0; case ((1,0),_) | ((3,0),_) | ((2,1) ,_)=> -2; case _ => -1}, //where -2 are obstacles
+    jumps = PartialFunction.empty /*{ case ((1,0),_) => (1,4); case ((3,0),_) => (3,2) }*/, //per rimuovere i jump PartialFunction.empty()
     gamma = 0.9,
     alpha = 0.5,
     epsilon = 0.3,

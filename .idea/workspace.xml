@@ -6,15 +6,12 @@
   <component name="BspLocalSettings">
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../../../2020-2021/pc/pc2-2021/code" value="PREVIEW" />
+        <entry key="$USER_HOME$/2020-2021/pc/pc2-2021/code" value="PREVIEW" />
       </map>
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be6a05cf-828c-439b-bff8-9ca1199192f0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/pc/rl/model/QMatrix.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/pc/rl/model/QMatrix.scala" afterDir="false" />
-    </list>
+    <list default="true" id="be6a05cf-828c-439b-bff8-9ca1199192f0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/media/dati/work/Lessons/2022-2023/pc/pc-mod2-code/src/main/scala/pc/rl/lab"
+    "last_opened_file_path": "/home/maria/University/2anno/pc2022-code"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -164,6 +161,9 @@
         <item itemvalue="ScalaTest.ScalaTests in 'rl'" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ScalaProjectSettings">
+    <option name="scala3DisclaimerShown" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
